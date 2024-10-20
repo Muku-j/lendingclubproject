@@ -8,6 +8,7 @@ if __name__ == '__main__':
         sys.exit(-1)
     job_run_env = sys.argv[1]
     print("Creating Spark Session")
+    print(job_run_env)
     spark = Utils.get_spark_session(job_run_env)
     print("Created Spark Session")
     orders_df = DataReader.read_orders(spark,job_run_env)
